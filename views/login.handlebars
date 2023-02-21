@@ -1,0 +1,23 @@
+<div>
+    <h1>Login</h1>
+</div>
+   <form action="/api/sessions/login" method="post">
+       <label for="">Email</label>
+       <input type="email" name="email">
+       <label for="">Password</label>
+       <input type="password" name="password" >
+       <button type="submit">Login</button>
+    </form>
+    <div>
+         <button id="register" onclick="register()">Register</button>
+    </div>
+
+
+    <script>
+        const registerButton = document.getElementById('register');
+        function register(){
+            window.location.href = '/api/sessions/register'
+        }
+        registerButton.addEventListener('click',register);
+
+    </script>
